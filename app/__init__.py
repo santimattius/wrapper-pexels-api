@@ -2,6 +2,7 @@ from flask import Blueprint
 from flask_restplus import Api
 
 from .main.healthcheck.controller.health_check_controller import api as healthcheck_ns
+from .main.pexels.controller.pexels_wrapper_controller import api as pexels_ns
 
 blueprint = Blueprint('api', __name__)
 
@@ -12,3 +13,4 @@ api = Api(blueprint,
           )
 
 api.add_namespace(healthcheck_ns, path='/test')
+api.add_namespace(pexels_ns)

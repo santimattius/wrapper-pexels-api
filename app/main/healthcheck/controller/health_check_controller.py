@@ -4,6 +4,7 @@ from ..model.health_check_dto import HealthCheck
 
 api = HealthCheck.api
 
+
 @api.route('/healthcheck')
 class HealthCheckController(Resource):
 
